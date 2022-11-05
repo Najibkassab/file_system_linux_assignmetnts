@@ -1,7 +1,7 @@
 # file_system_linux_assignmetnts(Part of yocto_project_assignments)
-#To_build you need to use -lm </br>
+# To_build you need to use -lm </br>
 ex: gcc -o cfdisk cfdisk.c -lm</br>
-#P.S.</br>
+# P.S.</br>
 1.There are many limitations, one of which is that the GPT and MBR partition names are limited to the most common names. However, there should be a lookup table, but due to time constraints, I must make it this way.</br>
 2. There is room for improvement and optimization, and there will be in the future, inshallah.</br>
 /*first assignment--------------------------------------------*/</br>
