@@ -1,5 +1,5 @@
-# file_system_linux_assignmetnts(Part of yocto_project_assignments)
-#first assignment</br>
+# File_system_linux_assignmetnts(Part of yocto_project_assignments)
+# First assignment</br>
 # To build you need to use -lm </br>
 ex: gcc -o cfdisk cfdisk.c -lm</br>
 # P.S.</br>
