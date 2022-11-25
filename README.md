@@ -23,16 +23,16 @@ char *GPTPRATNAME(uint64_t partid)</br>
 /*Get MBR Parition Name---------------------------------------*/</br>
 char *PRATNAME(int partid);
 
-#second assignment</br>
-to build the assignment gcc -o cls cls.c</br>
-to run you shall pass option and directory</br>
-e.g: ./cls -r /home</br>
-the options are -r for recursive</br>
-                -l for listing information</br>
-                -a for showing hidden files</br>
-of course you can combien them as you like e.g. -la   -ra -rla</br>
-for directory you can write one or more directories</br>
-P.S if you will not write any directory the command will list the current one.</br>
+# second assignment</br>
+# to build the assignment gcc -o cls cls.c</br>
+# to run you shall pass option and directory</br>
+# e.g: ./cls -r /home</br>
+# the options are -r for recursive</br>
+#                 -l for listing information</br>
+ #                -a for showing hidden files</br>
+# of course you can combien them as you like e.g. -la   -ra -rla</br>
+# for directory you can write one or more directories</br>
+# P.S if you will not write any directory the command will list the current one.</br>
 </br>
 /*Functions I used--------------------------------------------*/</br>
 1)getopt() to parses the command-line arguments </br>
