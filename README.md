@@ -1,6 +1,6 @@
 # file_system_linux_assignmetnts(Part of yocto_project_assignments)
 #first assignment</br>
-# To_build you need to use -lm </br>
+# To build you need to use -lm </br>
 ex: gcc -o cfdisk cfdisk.c -lm</br>
 # P.S.</br>
 1.There are many limitations, one of which is that the GPT and MBR partition names are limited to the most common names. However, there should be a lookup table, but due to time constraints, I must make it this way.</br>
@@ -23,8 +23,8 @@ char *GPTPRATNAME(uint64_t partid)</br>
 /*Get MBR Parition Name---------------------------------------*/</br>
 char *PRATNAME(int partid);
 
-# second assignment</br>
-# to build the assignment gcc -o cls cls.c</br>
+# Second assignment</br>
+# To build the assignment gcc -o cls cls.c</br>
  to run you shall pass option and directory</br>
  e.g: ./cls -r /home</br>
  the options are -r for recursive</br>
