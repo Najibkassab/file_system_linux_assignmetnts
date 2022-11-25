@@ -119,6 +119,7 @@ int main (int argc, char **argv)
 
 int PrintDIREntries (char *path, uint8_t flag)
 {
+printf("flag=%d/n",flag);
 
   switch (flag)
     {
@@ -210,10 +211,11 @@ char *filePermStr (mode_t perm)
 }
 
 
-int listdetials (struct dirent *file)
+int listdetials (char *file)
 {
+  
   struct stat mystat;
-  if (stat (file->d_name, &mystat) < 0)
+  if (stat (file, &mystat) < 0)
     {
       perror ("stat");
       return -1;
@@ -292,7 +294,9 @@ int printFiles (char *name, uint8_t flag)
 	      printf ("%s%s\t", KGRN, entry->d_name);
 	      if (list_flag)
 		{
-		  listdetials (entry);
+		snprintf (path, sizeof (path), "%s/%s", name, entry->d_name);
+		chdir(path);
+		  listdetials (path);
 		}
 	      continue;
 	    }
@@ -303,8 +307,10 @@ int printFiles (char *name, uint8_t flag)
 	  if (!ISHiddenfile (entry->d_name))
 	    {
 	      printf ("%s%s\t", KBLU, entry->d_name);
-	      if (list_flag)
-		listdetials (entry);
+	      if (list_flag){
+	      		snprintf (path, sizeof (path), "%s/%s", name, entry->d_name);
+		listdetials (path);
+	    }
 	    }
 	}
       else
@@ -315,7 +321,8 @@ int printFiles (char *name, uint8_t flag)
 	      printf ("%s%s\t", KWHT, entry->d_name);
 	      if (list_flag)
 		{
-		  listdetials (entry);
+		snprintf (path, sizeof (path), "%s/%s", name, entry->d_name);
+		 listdetials (path);
 		}
 	    }
 	}
